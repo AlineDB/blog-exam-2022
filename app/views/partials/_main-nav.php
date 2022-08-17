@@ -14,7 +14,7 @@
             <?php else: ?>
                 <a href="/?action=profile&resource=auth"
                    class="my-1 text-gray-800 hover:text-blue-500 md:mx-4 md:my-0"><?= $_SESSION['connected_author']->name ?></a>
-                <a href="/?action=create&resource=post"
+                <a href="/?action=create&resource=profile"
                    class="my-1 text-gray-800 hover:text-blue-500 md:mx-4 md:my-0">New post</a>
                 <form action="/"
                       method="post">
