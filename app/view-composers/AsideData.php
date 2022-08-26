@@ -4,7 +4,7 @@ namespace Blog\ViewComposers;
 
 trait AsideData
 {
-    public function fetch_aside_data()
+    public function fetch_aside_data(): array
     {
         $authors = $this->author_model->get();
         $categories = $this->category_model->get();
