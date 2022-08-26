@@ -10,10 +10,15 @@ use Blog\ViewComposers\AsideData;
 class SessionController
 {
     use AsideData;
-
+//ce qu'il me manquait erreur au login !
+    public function __construct(
+        private readonly Author $author_model = new Author(),
+        private readonly Category $category_model = new Category(),
+        private readonly Post $post_model = new Post(),
+    ) {
+    }
     public function create(): array
     {
-
         $view_data = [];
         $view_data['view'] = 'auth/login_form.php';
         $view_data['data'] = $this->fetch_aside_data();
@@ -24,9 +29,9 @@ class SessionController
     #[NoReturn] public function store(): void
     {
         $email = $_POST['email'];
-        if ($author = Author::where('email', $email)->first()) {
+        if ($author = $this->author_model->find_by_email($email)) {
             if (password_verify($_POST['password'], $author->password)) {
-                $_SESSION['connected_author'] = serialize($author);
+                $_SESSION['connected_author'] = $author;
                 header('Location: /?action=index&resource=post&author='.$author->slug);
                 exit;
             }

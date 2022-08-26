@@ -1,3 +1,4 @@
+
 <header class="px-6 py-4 bg-white shadow">
     <div class="container flex flex-col mx-auto md:flex-row md:items-center md:justify-between">
         <h1 class="flex items-center justify-between">
@@ -12,14 +13,16 @@
                 <a href="/?action=login&resource=auth"
                    class="my-1 text-gray-800 hover:text-blue-500 md:mx-4 md:my-0">Login</a>
             <?php else: ?>
-                <a href="/?action=profile&resource=auth"
-                   class="my-1 text-gray-800 hover:text-blue-500 md:mx-4 md:my-0"><?= $_SESSION['connected_author']->name ?></a>
-                <a href="/?action=create&resource=profile"
-                   class="my-1 text-gray-800 hover:text-blue-500 md:mx-4 md:my-0">New post</a>
+                <a href="/?action=edit&resource=profile"
+                   class="my-1 text-gray-800 hover:text-blue-500 md:mx-4 md:my-0"><?= unserialize($_SESSION['connected_author'])->name ?></a>
                 <form action="/"
                       method="post">
-                    <input type="hidden" name="action" value="logout">
-                    <input type="hidden" name="resource" value="auth">
+                    <input type="hidden"
+                           name="action"
+                           value="logout">
+                    <input type="hidden"
+                           name="resource"
+                           value="auth">
                     <button type="submit">Logout</button>
                 </form>
             <?php endif; ?>

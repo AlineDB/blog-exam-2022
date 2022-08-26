@@ -128,7 +128,4 @@ class PostController
         }
     }
 
-    public function rss(): array{
-
-    }
 }
