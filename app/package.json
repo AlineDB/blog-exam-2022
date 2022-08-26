@@ -1,0 +1,30 @@
+{
+  "name": "blog-exam",
+  "version": "1.0.0",
+  "description": "blog-exam",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "keywords": [],
+  "author": "Arthur Remendaer",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "cross-env": "^6.0.3",
+    "laravel-mix": "^6.0.42",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.26.9",
+    "sass-loader": "^8.0.2",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {}
+}

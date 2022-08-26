@@ -1,0 +1,7 @@
+node_modules/
+vendor/
+dist/
+config/
+docker/
+.env
+docker-compose.yml
