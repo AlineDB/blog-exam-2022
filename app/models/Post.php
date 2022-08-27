@@ -16,6 +16,7 @@ class Post extends Model
         parent::__construct();
     }
 
+
     public function save(stdClass $post): bool|string
     {
         try {

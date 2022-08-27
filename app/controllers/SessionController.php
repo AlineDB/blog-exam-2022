@@ -1,4 +1,5 @@
 <?php
+
 namespace Blog\Controllers;
 
 use Blog\Models\Post;
@@ -10,15 +11,17 @@ use Blog\ViewComposers\AsideData;
 class SessionController
 {
     use AsideData;
-//ce qu'il me manquait erreur au login !
+        //ce qui me manquait !!
     public function __construct(
         private readonly Author $author_model = new Author(),
         private readonly Category $category_model = new Category(),
         private readonly Post $post_model = new Post(),
     ) {
     }
+
     public function create(): array
     {
+
         $view_data = [];
         $view_data['view'] = 'auth/login_form.php';
         $view_data['data'] = $this->fetch_aside_data();

@@ -17,7 +17,7 @@ class ProfileController
     public function __construct()
     {
         if (!isset($_SESSION['connected_author'])) {
-            header('Location: http://blog.test/?action=login&resource=auth');
+            header('Location: /?action=login&resource=auth');
             exit;
         }
         $this->author = unserialize($_SESSION['connected_author']);

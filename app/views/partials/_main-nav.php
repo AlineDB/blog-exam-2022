@@ -13,19 +13,16 @@
                 <a href="/?action=login&resource=auth"
                    class="my-1 text-gray-800 hover:text-blue-500 md:mx-4 md:my-0">Login</a>
             <?php else: ?>
-                <a href="/?action=edit&resource=profile"
-                   class="my-1 text-gray-800 hover:text-blue-500 md:mx-4 md:my-0"><?= unserialize($_SESSION['connected_author'])->name ?></a>
+                <a href="/"
+                   class="my-1 text-gray-800 hover:text-blue-500 md:mx-4 md:my-0"><?= $_SESSION['connected_author']->name ?></a>
                 <form action="/"
                       method="post">
-                    <input type="hidden"
-                           name="action"
-                           value="logout">
-                    <input type="hidden"
-                           name="resource"
-                           value="auth">
+                    <input type="hidden" name="action" value="logout">
+                    <input type="hidden" name="resource" value="auth">
                     <button type="submit">Logout</button>
                 </form>
             <?php endif; ?>
         </nav>
     </div>
 </header>
+

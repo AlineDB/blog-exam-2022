@@ -1,6 +1,7 @@
 <?php
 
-use Models\Post;
+use Blog\Models\Post;
+
 
 require '../configs/config.php';
 require '../vendor/autoload.php';

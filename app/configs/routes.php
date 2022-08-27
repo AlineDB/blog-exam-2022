@@ -70,5 +70,4 @@ return [
         'controller' => 'ProfileController',
         'callback' => 'update',
     ],
-
 ];

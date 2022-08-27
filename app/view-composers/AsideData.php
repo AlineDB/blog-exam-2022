@@ -4,10 +4,6 @@ namespace Blog\ViewComposers;
 
 trait AsideData
 {
-    public function __construct($auth_model){
-
-    }
-
     public function fetch_aside_data(): array
     {
         $authors = $this->author_model->get();
