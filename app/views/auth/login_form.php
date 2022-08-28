@@ -30,8 +30,7 @@
 
         <title>Login - Blog</title>
 
-        <link href="https://tailwindcomponents.com/css/component.blog-page.css"
-              rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="bg-gray-200">
         <div class="overflow-x-hidden bg-gray-100">
@@ -50,8 +49,7 @@
                             <h1 class="text-xl font-bold text-gray-700 md:text-2xl">Login to the blog</h1>
                         </div>
                         <div class="mt-6">
-                            <form action="/"
-                                  method="post">
+                            <form action="/" method="post">
 
                                 <label for="email"
                                        class="block<?= isset($_SESSION['errors']['auth_email']) ? ' text-red-600' : '' ?> mb-2">Email</label>

@@ -28,6 +28,7 @@ return [
         'controller' => 'PostController',
         'callback' => 'create',
     ],
+    //permet d'accéder au form de login
     [
         'method' => 'GET',
         'action' => 'login',

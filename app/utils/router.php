@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection PhpIllegalStringOffsetInspection */
 $routes = require(DOCUMENT_ROOT.'/configs/routes.php');
 
 $method = $_SERVER['REQUEST_METHOD'];//GET ? POST ?

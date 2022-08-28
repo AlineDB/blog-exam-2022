@@ -11,7 +11,7 @@ use Blog\ViewComposers\AsideData;
 class SessionController
 {
     use AsideData;
-        //ce qui me manquait !!
+        //ce qu'il me manquait !!
     public function __construct(
         private readonly Author $author_model = new Author(),
         private readonly Category $category_model = new Category(),
