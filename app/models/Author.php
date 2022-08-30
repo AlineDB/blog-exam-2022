@@ -13,7 +13,7 @@ class Author extends Model
                        a.name, 
                        a.avatar, 
                        a.slug, 
-                       a.api_token
+                       a.api_token,
                        count(posts.id) as posts_count
                 FROM posts
                 JOIN authors a on posts.author_id = a.id
@@ -45,4 +45,6 @@ class Author extends Model
 
         return $statement->fetch();
     }
+
+
 }
