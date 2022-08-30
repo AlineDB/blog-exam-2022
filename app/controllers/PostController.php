@@ -109,7 +109,7 @@ class PostController
             $post->excerpt = $_POST['post-excerpt'];
             $post->category_id = $_POST['post-category'];
             $post->thumbnail = '';
-            $post->published_at = Carbon::now();
+            $post->published_at = Carbon::now(); //créer une date
             $authors = $this->author_model->get();
             $count_authors = count($authors);
             $author = $authors[rand(0, $count_authors - 1)];

@@ -7,8 +7,8 @@
         "cocur/slugify": "^4.1",
         "ext-pdo": "*",
         "nesbot/carbon": "^2.58",
-        "intervention/image": "^2.7",
-      "ext-fileinfo": "*"
+      "ext-fileinfo": "*",
+        "intervention/image": "^2.7"
     },
     "require-dev": {
         "fakerphp/faker": "^1.19"

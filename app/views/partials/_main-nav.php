@@ -13,8 +13,8 @@
                 <a href="/?action=login&resource=auth"
                    class="my-1 text-gray-800 hover:text-blue-500 md:mx-4 md:my-0">Login</a>
             <?php else: ?>
-                <a href="/"
-                   class="my-1 text-gray-800 hover:text-blue-500 md:mx-4 md:my-0"><?= $_SESSION['connected_author']->name ?></a>
+                <a href="/?action=edit&resource=profile"
+                   class="my-1 index.phptext-gray-800 hover:text-blue-500 md:mx-4 md:my-0"><?= $_SESSION['connected_author']->name ?></a>
                 <form action="/"
                       method="post">
                     <input type="hidden" name="action" value="logout">

@@ -2,7 +2,7 @@
 
 namespace Blog\Models;
 
-use stdClass;
+
 
 class Author extends Model
 {
@@ -22,7 +22,7 @@ class Author extends Model
         return $this->pdo_connection->query($sql)->fetchAll();
     }
 
-    public function find_by_slug($slug): stdClass|bool
+    public function find_by_slug($slug): \stdClass|bool
     {
         $sql = <<<SQL
             SELECT * FROM authors WHERE slug = :slug;
@@ -33,7 +33,8 @@ class Author extends Model
         return $statement->fetch();
     }
 
-    public function find_by_email($email): stdClass|bool
+
+    public function find_by_email($email): \stdClass|bool
     {
         $sql = <<<SQL
             SELECT * FROM authors WHERE email = :email;

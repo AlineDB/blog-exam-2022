@@ -71,4 +71,11 @@ return [
         'controller' => 'ProfileController',
         'callback' => 'update',
     ],
+    [
+        'method' => 'POST',
+        'action' => 'update',
+        'resource' => 'profile',
+        'controller' => 'ProfileController',
+        'callback' => 'update',
+    ],
 ];
