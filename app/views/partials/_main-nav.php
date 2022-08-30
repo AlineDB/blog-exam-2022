@@ -15,6 +15,11 @@
             <?php else: ?>
                 <a href="/?action=edit&resource=profile"
                    class="my-1 index.phptext-gray-800 hover:text-blue-500 md:mx-4 md:my-0"><?= $_SESSION['connected_author']->name ?></a>
+            <form action="/" method="post">
+                <input type="hidden" name="action" value="store">
+                <input type="hidden" name="resource" value="api_token">
+                <button type="submit">Created Token</button>
+            </form>
                 <form action="/"
                       method="post">
                     <input type="hidden" name="action" value="logout">

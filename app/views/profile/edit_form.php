@@ -68,7 +68,7 @@
                                        name="email"
                                     <?= isset($_SESSION['old']['email']) ?
                                         'value="'.$_SESSION['old']['email'].'"' :
-                                        'value="'.$data['author']['email'].'"'
+                                        'value="'.$data['author']->email.'"'
                                     ?>
                                        class="w-full rounded-md<?= isset($_SESSION['errors']['email']) ? ' border-red-600  accent-red-600' : ' border-gray-300' ?> shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
 

@@ -21,7 +21,7 @@ class ProfileController
             header('Location: /?action=login&resource=auth');
             exit;
         }
-        $this->author = unserialize($_SESSION['connected_author']);
+      //  $this->author = unserialize($_SESSION['connected_author']);
     }
 
 /*Fatal error: Uncaught TypeError: unserialize():

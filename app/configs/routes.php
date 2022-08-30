@@ -73,9 +73,16 @@ return [
     ],
     [
         'method' => 'POST',
-        'action' => 'update',
-        'resource' => 'profile',
-        'controller' => 'ProfileController',
-        'callback' => 'update',
+        'action' => 'store',
+        'resource' => 'api_post',
+        'controller' => 'TokenController',
+        'callback' => 'store',
+    ],
+    [
+        'method' => 'POST',
+        'action' => 'create',
+        'resource' => 'api_post',
+        'controller' => 'TokenController',
+        'callback' => 'create',
     ],
 ];
